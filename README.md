@@ -4,7 +4,9 @@ Esta é uma API construída com o framework Fastify para gerenciar polígonos em
 
 ## Descrição
 
-O LeafletPolygon é uma API construída com o framework Fastify que permite o gerenciamento eficiente de polígonos em um mapa Leaflet. A API oferece funcionalidades completas para criar, ler, atualizar e excluir polígonos, além de fornecer endpoints para autenticação de usuários com JWT.
+A API construída com o framework Fastify oferece um gerenciamento eficiente de estabelecimentos. Utilizando a biblioteca de mapas Leaflet, você pode definir polígonos para identificar os perímetros dos estabelecimentos. Essa abordagem não apenas visualiza a localização do estabelecimento, mas também permite uma representação precisa de sua área.
+
+Com o Fastify, você tem à disposição todas as funcionalidades necessárias para operar com os estabelecimentos, desde a criação até a exclusão. Além disso, a API fornece endpoints para autenticação de usuários com JWT, garantindo a segurança das operações.A combinação do Fastify com o Leaflet oferece uma solução poderosa e flexível para gerenciamento de estabelecimentos. 
 
 ## Tecnologias Utilizadas
 
