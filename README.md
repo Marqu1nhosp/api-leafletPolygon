@@ -36,11 +36,27 @@ Siga estas etapas para configurar e executar o projeto localmente:
    ```bash
    git clone https://github.com/seu-usuario/api-leafletpolygon.git
 
+2. Instale as dependências:
    ```bash
+   cd api-leafletpolygon
    npm install
 
-   ```bash
-   npx prisma migrate dev
+3. Configure o banco de dados MySQL
+
+    ```bash
+    Crie um banco chamado api_leaflet ou da sua prefêrencia
+
+3. Rode para as tabelas no banco
+
+    ```bash
+    npx prisma migrate dev
+
+3. Rode o servidor
+
+    ```bash
+    npm run dev
+
+
 
 
 
