@@ -47,7 +47,7 @@ Siga estas etapas para configurar e executar o projeto localmente:
     ```bash
     Crie um banco chamado api_leaflet ou da sua prefêrencia
 
-3. Rode para as tabelas no banco
+3. Rode para criar as tabelas no banco
 
     ```bash
     npx prisma migrate dev
