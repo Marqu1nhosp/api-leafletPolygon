@@ -14,7 +14,7 @@ export async function getPolygonId(app: FastifyInstance) {
         const polygonId = request.params.polygonId;
 
         try {
-            const polygons = await prisma.polygon.findMany({
+            const polygon = await prisma.polygon.findUnique({
                 where: {
                   id: polygonId
                 },
@@ -28,7 +28,7 @@ export async function getPolygonId(app: FastifyInstance) {
                 },
             });
 
-            return { polygons };
+            return { polygon } 
         } catch (error) {
             console.error("Erro ao buscar o polígono:", error);
             reply.code(500).send({ message: 'Erro ao buscar polígono' });

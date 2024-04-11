@@ -27,7 +27,7 @@ model User {
 model Polygon {
   id          String   @id @default(uuid())
   namePolygon String
-  coordinates String
+  coordinates String   @db.Text
   userId      String
   status      String
   createdAt   DateTime @default(now()) @map("created_at")

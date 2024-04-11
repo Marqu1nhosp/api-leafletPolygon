@@ -1,4 +1,4 @@
-# API LeafletPolygon
+# API Estabelecimentos
 
 Esta é uma API construída com o framework Fastify para gerenciar estabelecimentos em um mapa Leaflet.
 
@@ -37,7 +37,7 @@ Siga estas etapas para configurar e executar o projeto localmente:
 1. Clone este repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/api-leafletpolygon.git
+   git clone https://github.com/Marqu1nhosp/api-leafletPolygon.git
 
 2. Instale as dependências:
    ```bash
