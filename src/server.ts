@@ -11,6 +11,8 @@ import { authentication } from './routes/authentication';
 import { getUser } from './routes/get-user';
 import { getPolygonUser } from './routes/get-polygon-user';
 import { deletePolygonById } from './routes/delete-polygon-id';
+import { editPolygonById } from './routes/edit-polygon-id';
+import { getPolygonId } from './routes/get-polygon-id';
 
 const app = fastify()
 
@@ -31,6 +33,8 @@ app.register(createUser)
 app.register(getUser)
 app.register(getPolygonUser)
 app.register(deletePolygonById)
+app.register(editPolygonById)
+app.register(getPolygonId)
 
 // Registro da rota de autenticação
 app.register(authentication)

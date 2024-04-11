@@ -11,6 +11,7 @@ export async function createPolygon(app: FastifyInstance) {
                 namePolygon: z.string(),
                 coordinates: z.string(),
                 userId: z.string(),
+                status: z.string(),
             }),
             response: {
                 201: z.object({
@@ -20,13 +21,14 @@ export async function createPolygon(app: FastifyInstance) {
         }
     }, async (request, reply) => {
 
-        const { namePolygon, coordinates, userId } = request.body
+        const { namePolygon, coordinates, userId, status } = request.body
 
         const polygon = await prisma.polygon.create({
             data: {
                 namePolygon,
                 coordinates,
-                userId
+                userId,
+                status
             }
         })
 

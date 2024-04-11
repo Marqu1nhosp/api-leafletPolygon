@@ -12,6 +12,7 @@ export async function getPolygons(app: FastifyInstance) {
                     coordinates: true,
                     userId: true,
                     createdAt: true,
+                    status: true,
                 }
             })
            

@@ -29,6 +29,7 @@ model Polygon {
   namePolygon String
   coordinates String
   userId      String
+  status      String
   createdAt   DateTime @default(now()) @map("created_at")
   user        User     @relation(fields: [userId], references: [id])
 
