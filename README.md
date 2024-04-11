@@ -1,6 +1,6 @@
 # API LeafletPolygon
 
-Esta é uma API construída com o framework Fastify para gerenciar polígonos em um mapa Leaflet.
+Esta é uma API construída com o framework Fastify para gerenciar estabelecimentos em um mapa Leaflet.
 
 ## Descrição
 
