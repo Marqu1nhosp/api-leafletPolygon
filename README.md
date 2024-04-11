@@ -36,4 +36,11 @@ Siga estas etapas para configurar e executar o projeto localmente:
    ```bash
    git clone https://github.com/seu-usuario/api-leafletpolygon.git
 
-   
+   ```bash
+   npm install
+
+   ```bash
+   npx prisma migrate dev
+
+
+
