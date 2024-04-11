@@ -18,6 +18,7 @@ O LeafletPolygon é uma API construída com o framework Fastify que permite o ge
 
 A API oferece as seguintes rotas:
 
+- `POST /authentication`:  Esta rota espera um corpo JSON contendo as credenciais do usuário (por exemplo, e-mail e    senha) e retorna um token JWT válido se as credenciais forem válidas.
 - `POST /create-polygon`: Cria um novo polígono.
 - `GET /get-polygons`: Obtém todos os polígonos.
 - `POST /create-user`: Cria um novo usuário.
