@@ -2,6 +2,7 @@ import { ZodTypeProvider } from "fastify-type-provider-zod";
 import { z } from "zod";
 import { prisma } from "../lib/prisma";
 import { FastifyInstance } from "fastify";
+import crypto from 'crypto'
 
 export async function createUser(app: FastifyInstance) {
     app.withTypeProvider<ZodTypeProvider>().post('/user', {
@@ -23,11 +24,13 @@ export async function createUser(app: FastifyInstance) {
         
             const { name, username, password } = request.body;
 
+            const hashPassword = crypto.createHash('md5').update(password).digest('hex');
+
             const newUser = await prisma.user.create({
                 data: {
                     name,
                     username,
-                    password,
+                    password: hashPassword,
                 }
             });
 

@@ -2,6 +2,7 @@ import { FastifyInstance } from 'fastify';
 import { ZodTypeProvider } from 'fastify-type-provider-zod';
 import { prisma } from '../lib/prisma';
 import { z } from 'zod';
+import crypto from 'crypto'
 
 export async function authentication(app: FastifyInstance) {
     app.withTypeProvider<ZodTypeProvider>().post('/auth', {
@@ -21,7 +22,9 @@ export async function authentication(app: FastifyInstance) {
             }
         });
 
-        if (!user || user.password !== password) {
+        const hashedPassword = crypto.createHash('md5').update(password).digest('hex');
+
+        if (!user || user.password !== hashedPassword) {
             // Se o usuário não for encontrado ou as senhas não coincidirem, retorne uma mensagem de erro
             reply.code(401).send({ message: 'Credenciais inválidas' });
             return;
